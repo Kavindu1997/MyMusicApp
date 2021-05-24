@@ -4,25 +4,29 @@
       <form class="form-horizontal">
         <fieldset>
           <legend>Welcome to Sarigama</legend>
-          <div class="form-groups">
-            <label for="dynamicSearch" class="col-sm-2 col-form-label">Search Music</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="dynamicSearch" placeholder="Type here..."/>
-            </div>
-          </div>
+          <app-search></app-search>
         </fieldset>
       </form>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            Results:
+               <app-result></app-result>
         </div>
     </div>
   </div>
 </template>
 
 <script>
+import SearchArea from './SearchArea.vue'
+import ResultArea from './ResultArea.vue'
+
+export default{
+       components:{
+           'app-result':ResultArea,
+           'app-search':SearchArea
+       }
+}
 </script>
 
 <style>
